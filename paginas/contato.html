@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fale com a redação do Jornal da Vila: envie sua mensagem, sugestão de pauta ou dúvida.">
+    <title>Contate-nos | Jornal da Vila</title>
+    <link rel="icon" href="../midias/favicon.ico">
+    <link rel="stylesheet" href="../estilos/layout.css">
+</head>
+<body>
+    <header>
+        <a class="marca" href="../index.html" aria-label="Página inicial do Jornal da Vila">
+            <img src="../midias/logo-jornal-da-vila.png" alt="Logotipo do Jornal da Vila">
+            <strong>Jornal da Vila</strong>
+        </a>
+        <h1>Fale com a redação</h1>
+    </header>
+
+    <nav aria-label="Menu principal">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#noticia">Matéria principal</a></li>
+            <li><a href="contato.html">Contate-nos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="contato" class="contato" aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato">Envie sua mensagem para a redação</h2>
+            <form id="formulario-contato" action="#" method="post">
+                <p>
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" required minlength="3" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]{3,}" title="Digite apenas letras e espaços." autocomplete="name">
+                </p>
+
+                <p>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Digite um email válido, como nome@gmail.com." autocomplete="email">
+                </p>
+
+                <p>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" inputmode="numeric" maxlength="11" pattern="[0-9]{10,11}" placeholder="11999999999" title="Digite apenas números, com DDD." autocomplete="tel">
+                </p>
+
+                <p>
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" autocomplete="address-line1">
+                </p>
+
+                <p>
+                    <label for="data-nascimento">Data de Nascimento</label>
+                    <input type="date" id="data-nascimento" name="dataNascimento">
+                </p>
+
+                <p>
+                    <label for="origem">Onde nos conheceu?</label>
+                    <select id="origem" name="origem">
+                        <option value="Amigos">Amigos</option>
+                        <option value="Redes Sociais">Redes Sociais</option>
+                        <option value="Google">Google</option>
+                        <option value="Indicacao">Indicação</option>
+                        <option value="Evento">Evento</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                </p>
+
+                <p class="opcao">
+                    <input type="checkbox" id="novidades" name="novidades">
+                    <label for="novidades">Deseja receber novidades?</label>
+                </p>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <aside aria-labelledby="links-contato">
+            <h2 id="links-contato">Links relacionados</h2>
+            <ul>
+                <li><a href="../index.html#noticia">Matéria principal</a></li>
+                <li><a href="sobre.html">Sobre o Jornal da Vila</a></li>
+                <li><a href="../index.html">Voltar para o portal</a></li>
+            </ul>
+        </aside>
+
+        <section id="confirmacao" class="confirmacao" aria-labelledby="titulo-confirmacao" hidden>
+            <h2 id="titulo-confirmacao">Confirmação dos Dados</h2>
+            <dl>
+                <dt>Nome:</dt>
+                <dd id="confirma-nome"></dd>
+                <dt>Email:</dt>
+                <dd id="confirma-email"></dd>
+                <dt>Telefone:</dt>
+                <dd id="confirma-telefone"></dd>
+                <dt>Endereço:</dt>
+                <dd id="confirma-endereco"></dd>
+                <dt>Data de Nascimento:</dt>
+                <dd id="confirma-data"></dd>
+                <dt>Onde nos conheceu:</dt>
+                <dd id="confirma-origem"></dd>
+                <dt>Mensagem:</dt>
+                <dd id="confirma-mensagem"></dd>
+                <dt>Receber novidades:</dt>
+                <dd id="confirma-novidades"></dd>
+            </dl>
+            <button type="button" id="botao-confirmar">[ CONFIRMAR ]</button>
+            <p id="mensagem-final" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jornal da Vila. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="contato.html">Fale com a redação</a></li>
+        </ul>
+    </footer>
+
+    <script src="../scripts/formulario.js"></script>
+</body>
+</html>
